@@ -14,6 +14,7 @@ export default function ProductLayout() {
               <Ionicons name="arrow-back" size={24} color="black" />
             </TouchableOpacity>
           ),
+          headerTitleAlign: 'center'
         })}
       />
     </Stack>

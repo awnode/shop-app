@@ -4,7 +4,7 @@ import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 
 export const ProductListItem = ({ product }: { product: Product }) => {
   return (
-    <Link asChild href={`/product/${product.slug}` as string}>
+    <Link asChild href={`/product/${product.slug}`}>
       <Pressable style={styles.item}>
         <View style={styles.itemImageContainer}>
           <Image source={product.heroImage} style={styles.itemImage} />
