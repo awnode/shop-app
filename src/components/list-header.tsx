@@ -11,11 +11,14 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useCartStore } from '../store/cart-store';
 
 const imgUri =
   'https://images.pexels.com/photos/17567462/pexels-photo-17567462.jpeg?_gl=1*nlw6cd*_ga*NjkxMTMyODAzLjE3NjQ2NTkxNTM.*_ga_8JE65Q40S6*czE3NjQ2NTkxNTMkbzEkZzEkdDE3NjQ2NTkxNTckajU2JGwwJGgw';
 
 export const ListHeader = () => {
+  const { getItemCount } = useCartStore();
+
   return (
     <View style={styles.headerContainer}>
       <View style={styles.headerTop}>
@@ -38,7 +41,7 @@ export const ListHeader = () => {
                   />
 
                   <View style={styles.badgeContainer}>
-                    <Text style={styles.badgeText}>{1}</Text>
+                    <Text style={styles.badgeText}>{getItemCount()}</Text>
                   </View>
                 </View>
               )}
