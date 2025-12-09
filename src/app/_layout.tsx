@@ -1,9 +1,12 @@
 import { Stack } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { ToastProvider } from 'react-native-toast-notifications';
 
 export default function RootLayout() {
+  const insets = useSafeAreaInsets();
+
   return (
-    <ToastProvider>
+    <ToastProvider offsetTop={insets.top} offsetBottom={insets.bottom}>
       <Stack>
         <Stack.Screen
           name="(shop)"
