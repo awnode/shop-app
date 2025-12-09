@@ -155,6 +155,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    paddingBottom: 10
   },
   price: {
     fontWeight: 'bold',
@@ -174,6 +175,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 16,
     paddingHorizontal: 16,
+    paddingBottom: 10
   },
   quantityButton: {
     width: 40,
