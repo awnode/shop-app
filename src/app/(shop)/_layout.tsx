@@ -19,7 +19,7 @@ const TabsLayout = () => {
 
     if (Platform.OS === 'android') {
       // Paksa status bar tidak memengaruhi layout
-      StatusBar.setTranslucent(false);
+      // StatusBar.setTranslucent(false);
       StatusBar.setBarStyle('dark-content');
     }
   }, []);
@@ -55,6 +55,7 @@ const TabsLayout = () => {
             tabBarIcon(props) {
               return <TabBarIcon {...props} name="book" />;
             },
+            headerShown: false,
           }}
         />
       </Tabs>
