@@ -1,10 +1,12 @@
 import { PRODUCTS } from '@/assets/products';
 import { ListHeader } from '@/src/components/list-header';
 import { FlatList, StyleSheet, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { ProductListItem } from '../../components/product-list-item';
 
 const Home = () => {
   return (
+    <SafeAreaView edges={['top']}>
     <View>
       <FlatList
         data={PRODUCTS}
@@ -17,6 +19,7 @@ const Home = () => {
         style={{ paddingHorizontal: 10, paddingVertical: 5 }}
       />
     </View>
+    </SafeAreaView>
   );
 };
 

@@ -25,7 +25,7 @@ const TabsLayout = () => {
   }, []);
 
   return (
-    <SafeAreaView edges={['top', 'bottom']} style={styles.safeArea}>
+    <SafeAreaView edges={['bottom']} style={styles.safeArea}>
       <Tabs
         screenOptions={{
           tabBarActiveTintColor: '#1BC464',

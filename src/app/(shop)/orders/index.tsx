@@ -9,6 +9,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const statusDisplayText: Record<OrderStatus, string> = {
   Pending: 'Pending',
@@ -40,14 +41,16 @@ const renderItem: ListRenderItem<Order> = ({ item }) => (
 
 const Orders = () => {
   return (
-    <View style={styles.container}>
-      <Stack.Screen options={{ title: 'Orders' }} />
-      <FlatList
-        data={ORDERS}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={renderItem}
-      />
-    </View>
+    <SafeAreaView edges={['top']} style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <Stack.Screen options={{ title: 'Orders' }} />
+        <FlatList
+          data={ORDERS}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={renderItem}
+        />
+      </View>
+    </SafeAreaView>
   );
 };
 
